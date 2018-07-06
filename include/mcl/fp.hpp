@@ -330,6 +330,12 @@ public:
 		uint32_t size = op_.hash(buf, static_cast<uint32_t>(sizeof(buf)), msg, static_cast<uint32_t>(msgSize));
 		setArrayMask(buf, size);
 	}
+	void setHash128Of(const void *msg, size_t msgSize)
+	{
+		char buf[MCL_MAX_HASH_BIT_SIZE / 8];
+		op_.hash(buf, static_cast<uint32_t>(sizeof(buf)), msg, static_cast<uint32_t>(msgSize));
+		setArrayMask(buf, 16);
+	}
 	void getMpz(bool *pb, mpz_class& x) const
 	{
 		fp::Block b;

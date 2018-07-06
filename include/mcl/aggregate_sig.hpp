@@ -262,4 +262,7 @@ typedef AGGS::SecretKey SecretKey;
 typedef AGGS::PublicKey PublicKey;
 typedef AGGS::Signature Signature;
 
+typedef vector<SecretKey> SecretKeyVec;
+typedef vector<PublicKey> PublicKeyVec;
+typedef vector<Signature> SignatureVec;
 } } // mcl::aggs

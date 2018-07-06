@@ -143,6 +143,12 @@ int mclBnFr_setHashOf(mclBnFr *x, const void *buf, mclSize bufSize)
 	return 0;
 }
 
+int mclBnFr_setHash128Of(mclBnFr *x, const void *buf, mclSize bufSize)
+{
+	cast(x)->setHash128Of(buf, bufSize);
+	return 0;
+}
+
 mclSize mclBnFr_getStr(char *buf, mclSize maxBufSize, const mclBnFr *x, int ioMode)
 {
 	return cast(x)->getStr(buf, maxBufSize, ioMode);

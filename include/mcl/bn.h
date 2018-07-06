@@ -207,6 +207,7 @@ MCLBN_DLL_API int mclBnFr_setByCSPRNG(mclBnFr *x);
 // hash(s) and set x
 // return 0 if success
 MCLBN_DLL_API int mclBnFr_setHashOf(mclBnFr *x, const void *buf, mclSize bufSize);
+MCLBN_DLL_API int mclBnFr_setHash128Of(mclBnFr *x, const void *buf, mclSize bufSize);
 
 
 MCLBN_DLL_API void mclBnFr_neg(mclBnFr *y, const mclBnFr *x);
